@@ -22,7 +22,7 @@ class TestLogsUrl:
 
         result = runner.invoke(logs_url, ['70ed01da-f291-4e29-b75c-1f7977edf252'])
         assert_success(result)
-        assert re.compile('http[s]?://.*/#!result/.*/overview', re.DOTALL).match(result.output) is not None
+        assert re.compile('http[s]?://.*#!result/.*/overview', re.DOTALL).match(result.output) is not None
 
     @pytest.mark.usefixtures("neoload_login")  # it's like @Before on the neoload_login function
     def test_logs_with_name(self, monkeypatch):
@@ -42,9 +42,13 @@ class TestLogsUrl:
         mock_api_get(monkeypatch, 'nlweb/rest/rest-api/url-api/v1/action/get-front-end-url',
                      '{"frontEndUrl":{"pathFormatMap":{"HOME":"https://neoload.saas.neotys.com/#!",'
                      '"RESULT_OVERVIEW":"https://neoload.saas.neotys.com/#!result/:benchId/overview"}}}')
-        result = runner.invoke(logs_url, [json_first_test_result_name])
-        assert '#!result/%s/overview' % json_first_test_result_id in result.output
-        assert_success(result)
+        result_with_id = runner.invoke(logs_url, [json_first_test_result_id])
+        assert '#!result/%s/overview' % json_first_test_result_id in result_with_id.output
+        assert_success(result_with_id)
+
+        result_with_name = runner.invoke(logs_url, [json_first_test_result_name])
+        assert '#!result/%s/overview' % json_first_test_result_id in result_with_name.output
+        assert_success(result_with_name)
 
     @pytest.mark.usefixtures("neoload_login")  # it's like @Before on the neoload_login function
     def test_logs_required(self):
