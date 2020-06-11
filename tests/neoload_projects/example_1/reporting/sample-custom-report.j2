@@ -1,0 +1,139 @@
+<html>
+<body>
+<h1>{{summary.name}}</h1>
+
+<h3>General Details</h3>
+Run Date: {{ summary.startDateText }}<br />
+Period: {{ summary.startDateText }} - {{ summary.endDateText }}<br />
+Run Duration: {{ summary.durationText }}<br />
+<br />
+Status: {{summary.qualityStatus}}<br />
+Author: {{summary.author}}<br />
+
+<h3>Description/Conclusion</h3>
+{{summary.description}}<br />
+
+
+<h3>Workload Characteristics</h3>
+Max Running Users: <br />
+Average Hits per Second: {{ statistics.totalRequestCountPerSecond }} <br />
+Total Hits: {{ statistics.totalRequestCountSuccess }}<br />
+Total Passed Transactions per Second: {{ statistics.totalTransactionCountPerSecond }}<br />
+Total Transactions (Success): {{ statistics.totalTransactionCountSuccess }}<br />
+Total Transactions (Failed): {{ statistics.totalTransactionCountFailure }}<br />
+
+<h3>Transactions:</h3>
+<table>
+<thead>
+<tr>
+<td>Name</td>
+<td>Count</td>
+<td>TPS</td>
+<td>Min Dur</td>
+<td>Avg Dur</td>
+<td>Max Dur</td>
+<td>Total</td>
+<td>Success</td>
+<td>Fail</td>
+<td>p50</td>
+<td>p90</td>
+<td>p95</td>
+<td>p99</td>
+</tr>
+</thead>
+<tbody>
+{% for txn in elements.transactions| rejectattr('id', 'equalto', 'all-transactions')|sort(attribute='avgDuration',reverse=true) %}
+<tr>
+<td>{{ txn.display_name|e }}</td>
+<td>{{ txn.aggregate.count }}</td>
+<td>{{ txn.aggregate.elementPerSecond }}</td>
+<td>{{ txn.aggregate.minDuration }}</td>
+<td>{{ txn.aggregate.avgDuration }}</td>
+<td>{{ txn.aggregate.maxDuration }}</td>
+<td>{{ txn.totalCount }}</td>
+<td>{{ txn.aggregate.successCount }}</td>
+<td>{{ txn.aggregate.failureCount }}</td>
+<td>{{ txn.aggregate.percentile50 }}</td>
+<td>{{ txn.aggregate.percentile90 }}</td>
+<td>{{ txn.aggregate.percentile95 }}</td>
+<td>{{ txn.aggregate.percentile99 }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<h3>Ext. Data:</h3>
+<table>
+<thead>
+<tr>
+<td>Name</td>
+<td>p50</td>
+<td>p90</td>
+<td>p95</td>
+<td>p99</td>
+</tr>
+</thead>
+<tbody>
+{% for ext in ext_data|sort(attribute='percentiles.percentile50',reverse=true) %}
+<tr>
+<td>{{ ext.display_name|e }}</td>
+<td>{{ ext.percentiles.percentile50 }}</td>
+<td>{{ ext.percentiles.percentile90 }}</td>
+<td>{{ ext.percentiles.percentile95 }}</td>
+<td>{{ ext.percentiles.percentile99 }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+
+{#
+<h3>Events:</h3>
+<ul>
+{% for event in events %}
+  <li><strong>{{event.type}}</strong> - {{event.source}} - {{event.fullname}}</li>
+{% endfor %}
+</ul>
+#}
+
+<style type="text/css">
+body {
+  font-family: Helvetica, sans-serif;
+  padding: 2em;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+h1 {
+  margin: 1em auto;
+  text-align: center;
+}
+
+h3 {
+  padding: 0.3em;
+  margin: 1em auto;
+  text-align: center;
+  background-color: #e2e2ff;
+  border-bottom: #444;
+}
+</body>
+</html>

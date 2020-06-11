@@ -1,0 +1,948 @@
+{
+  "id": "37ea3484-d79b-405d-bbeb-202b3f732c3b",
+  "summary": {
+    "id": "37ea3484-d79b-405d-bbeb-202b3f732c3b",
+    "name": "Paul_18:30 - 10 Jun 2020",
+    "description": "The test was successfully executed for 11 users.",
+    "author": "Savio Fernandes",
+    "terminationReason": "POLICY",
+    "lgCount": 1,
+    "project": "NewSeleniumFirefox",
+    "scenario": "scenario1",
+    "status": "TERMINATED",
+    "qualityStatus": "PASSED",
+    "startDate": 1591794104682,
+    "endDate": 1591794737498,
+    "duration": 632816,
+    "startDateText": "2020-06-10 09:01:44",
+    "endDateText": "2020-06-10 09:12:17",
+    "durationText": "10 minutes, 32 seconds"
+  },
+  "statistics": {
+    "totalRequestCountSuccess": 15354,
+    "totalRequestCountFailure": 0,
+    "totalRequestDurationAverage": 36.756153,
+    "totalRequestCountPerSecond": 24.262978,
+    "totalTransactionCountSuccess": 363,
+    "totalTransactionCountFailure": 0,
+    "totalTransactionDurationAverage": 2398.9202,
+    "totalTransactionCountPerSecond": 0.57362646,
+    "totalIterationCountSuccess": 103,
+    "totalIterationCountFailure": 0,
+    "totalGlobalDownloadedBytes": 268731618,
+    "totalGlobalDownloadedBytesPerSecond": 424659.97,
+    "totalGlobalCountFailure": 0
+  },
+  "sla_global": [],
+  "sla_test": [],
+  "sla_interval": [],
+  "events": [
+    {
+      "id": "1",
+      "code": "1",
+      "elementid": "3ac47643-35ac-44ec-9d10-f3420643c1f0",
+      "fullname": "command_line",
+      "offset": 632429,
+      "type": "ERROR",
+      "duration": 0,
+      "source": "Tableau_Selenium_3#1 - Actions#17"
+    },
+    {
+      "id": "210-2-210-605934",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 605934,
+      "type": "ALERT",
+      "duration": 26658,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-605743",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 605743,
+      "type": "ALERT",
+      "duration": 26849,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-594786",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 594786,
+      "type": "ALERT",
+      "duration": 8146,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-594665",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 594665,
+      "type": "ALERT",
+      "duration": 8053,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-570676",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 570676,
+      "type": "ALERT",
+      "duration": 24110,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-570444",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 570444,
+      "type": "ALERT",
+      "duration": 24221,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-555602",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 555602,
+      "type": "ALERT",
+      "duration": 15074,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-555316",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 555316,
+      "type": "ALERT",
+      "duration": 15128,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "234-2-234-539109",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 539109,
+      "type": "ALERT",
+      "duration": 16207,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-538376",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 538376,
+      "type": "ALERT",
+      "duration": 17226,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-532105",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 532105,
+      "type": "ALERT",
+      "duration": 3002,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-531335",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 531335,
+      "type": "ALERT",
+      "duration": 3011,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-515021",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 515021,
+      "type": "ALERT",
+      "duration": 17084,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-514286",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 514286,
+      "type": "ALERT",
+      "duration": 17049,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-504977",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 504977,
+      "type": "ALERT",
+      "duration": 1001,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-504246",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 504246,
+      "type": "ALERT",
+      "duration": 1001,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "210-2-210-467972",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 467972,
+      "type": "ALERT",
+      "duration": 36274,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-467550",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 467550,
+      "type": "ALERT",
+      "duration": 37427,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-465919",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 465919,
+      "type": "ALERT",
+      "duration": 2053,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-465512",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 465512,
+      "type": "ALERT",
+      "duration": 2038,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-333072",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 333072,
+      "type": "ALERT",
+      "duration": 132847,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-332599",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 332599,
+      "type": "ALERT",
+      "duration": 132913,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-332066",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 332066,
+      "type": "ALERT",
+      "duration": 1006,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-331592",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 331592,
+      "type": "ALERT",
+      "duration": 1007,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "234-2-234-294157",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 294157,
+      "type": "ALERT",
+      "duration": 37435,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-293613",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 293613,
+      "type": "ALERT",
+      "duration": 38453,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-292141",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 292141,
+      "type": "ALERT",
+      "duration": 2016,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-291594",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 291594,
+      "type": "ALERT",
+      "duration": 2019,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "210-2-210-260102",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 260102,
+      "type": "ALERT",
+      "duration": 31492,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-259896",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 259896,
+      "type": "ALERT",
+      "duration": 32245,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-257100",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 257100,
+      "type": "ALERT",
+      "duration": 3002,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-256894",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 256894,
+      "type": "ALERT",
+      "duration": 3002,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-226082",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 226082,
+      "type": "ALERT",
+      "duration": 31018,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-225877",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 225877,
+      "type": "ALERT",
+      "duration": 31017,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-221079",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 221079,
+      "type": "ALERT",
+      "duration": 1001,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-220872",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 220872,
+      "type": "ALERT",
+      "duration": 1001,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-186831",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 186831,
+      "type": "ALERT",
+      "duration": 34248,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-186786",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 186786,
+      "type": "ALERT",
+      "duration": 34086,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-170791",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 170791,
+      "type": "ALERT",
+      "duration": 11038,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-170764",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 170764,
+      "type": "ALERT",
+      "duration": 11020,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "234-2-234-152499",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 152499,
+      "type": "ALERT",
+      "duration": 18265,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-2-210-152491",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 152491,
+      "type": "ALERT",
+      "duration": 18300,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-148494",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 148494,
+      "type": "ALERT",
+      "duration": 2002,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-148488",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 148488,
+      "type": "ALERT",
+      "duration": 2001,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "210-2-210-118218",
+      "code": "Monitoring c",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 90.0",
+      "offset": 118218,
+      "type": "ALERT",
+      "duration": 30270,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-2-234-117206",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 117206,
+      "type": "ALERT",
+      "duration": 31288,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "210-1-210-113204",
+      "code": "Monitoring w",
+      "elementid": "cpu",
+      "fullname": "Controller/cpu >= 80.0",
+      "offset": 113204,
+      "type": "ALERT",
+      "duration": 3006,
+      "source": "NeoLoad"
+    },
+    {
+      "id": "234-1-234-113200",
+      "code": "Monitoring w",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 80.0",
+      "offset": 113200,
+      "type": "ALERT",
+      "duration": 3001,
+      "source": "LG localhost:7100"
+    },
+    {
+      "id": "234-2-234-83718",
+      "code": "Monitoring c",
+      "elementid": "lgcpu.localhost:7100",
+      "fullname": "LG localhost:7100/lgcpu.localhost:7100 >= 90.0",
+      "offset": 83718,
+      "type": "ALERT",
+      "duration": 29482,
+      "source": "LG localhost:7100"
+    }
+  ],
+  "elements": {
+    "transactions": [
+      {
+        "id": "all-transactions",
+        "name": "<all transactions>",
+        "type": "ALL_TRANSACTIONS",
+        "display_name": "<all transactions>",
+        "aggregate": {
+          "count": 363,
+          "elementPerSecond": 0.57362646,
+          "minDuration": 657,
+          "maxDuration": 7030,
+          "sumDuration": 870808,
+          "avgDuration": 2398.9202,
+          "minTTFB": 5,
+          "maxTTFB": 21743,
+          "sumTTFB": 1955336,
+          "avgTTFB": 5386.6006,
+          "sumDownloadedBytes": 518840005,
+          "downloadedBytesPerSecond": 819890.8,
+          "successCount": 363,
+          "successPerSecond": 0.57362646,
+          "successRate": 100.0,
+          "failureCount": 0,
+          "failurePerSecond": 0.0,
+          "failureRate": 0.0,
+          "percentile50": 1502.0,
+          "percentile90": 4438.5,
+          "percentile95": 5156.5,
+          "percentile99": 5466.5
+        },
+        "totalCount": 363
+      },
+      {
+        "id": "289a8974-2946-40ad-8ae9-bf789e1e3988",
+        "name": "LaunchAndLogin",
+        "path": [
+          "Tableau_Protocol_3",
+          "Actions",
+          "LaunchAndLogin"
+        ],
+        "type": "TRANSACTION",
+        "display_name": "Tableau_Protocol_3 \\ Actions \\ LaunchAndLogin",
+        "aggregate": {
+          "count": 90,
+          "elementPerSecond": 0.14222144,
+          "minDuration": 3475,
+          "maxDuration": 7030,
+          "sumDuration": 391298,
+          "avgDuration": 4347.7554,
+          "minTTFB": 9,
+          "maxTTFB": 596,
+          "sumTTFB": 2056,
+          "avgTTFB": 22.844444,
+          "sumDownloadedBytes": 254125485,
+          "downloadedBytesPerSecond": 401578.78,
+          "successCount": 90,
+          "successPerSecond": 0.14222144,
+          "successRate": 100.0,
+          "failureCount": 0,
+          "failurePerSecond": 0.0,
+          "failureRate": 0.0,
+          "percentile50": 4094.5,
+          "percentile90": 5316.5,
+          "percentile95": 5386.5,
+          "percentile99": 7026.5
+        },
+        "totalCount": 90
+      },
+      {
+        "id": "d424c949-7358-41f0-b75a-d9c39198938c",
+        "name": "Launch",
+        "path": [
+          "Tableau_Protocol_3",
+          "Actions",
+          "LaunchAndLogin",
+          "Launch"
+        ],
+        "type": "TRANSACTION",
+        "display_name": "Tableau_Protocol_3 \\ Actions \\ LaunchAndLogin \\ Launch",
+        "aggregate": {
+          "count": 96,
+          "elementPerSecond": 0.15170287,
+          "minDuration": 657,
+          "maxDuration": 1826,
+          "sumDuration": 73666,
+          "avgDuration": 767.3542,
+          "minTTFB": 9,
+          "maxTTFB": 596,
+          "sumTTFB": 2129,
+          "avgTTFB": 22.177084,
+          "sumDownloadedBytes": 128045972,
+          "downloadedBytesPerSecond": 202343.14,
+          "successCount": 96,
+          "successPerSecond": 0.15170287,
+          "successRate": 100.0,
+          "failureCount": 0,
+          "failurePerSecond": 0.0,
+          "failureRate": 0.0,
+          "percentile50": 759.0,
+          "percentile90": 799.0,
+          "percentile95": 814.0,
+          "percentile99": 1826.0
+        },
+        "totalCount": 96
+      },
+      {
+        "id": "d186faca-842c-4bfb-bce7-8a33f84236f0",
+        "name": "Login",
+        "path": [
+          "Tableau_Protocol_3",
+          "Actions",
+          "LaunchAndLogin",
+          "Login"
+        ],
+        "type": "TRANSACTION",
+        "display_name": "Tableau_Protocol_3 \\ Actions \\ LaunchAndLogin \\ Login",
+        "aggregate": {
+          "count": 90,
+          "elementPerSecond": 0.14222144,
+          "minDuration": 2779,
+          "maxDuration": 6305,
+          "sumDuration": 322010,
+          "avgDuration": 3577.889,
+          "minTTFB": 21655,
+          "maxTTFB": 21743,
+          "sumTTFB": 1950424,
+          "avgTTFB": 21671.377,
+          "sumDownloadedBytes": 134086616,
+          "downloadedBytesPerSecond": 211888.8,
+          "successCount": 90,
+          "successPerSecond": 0.14222144,
+          "successRate": 100.0,
+          "failureCount": 0,
+          "failurePerSecond": 0.0,
+          "failureRate": 0.0,
+          "percentile50": 3310.5,
+          "percentile90": 4538.0,
+          "percentile95": 4601.0,
+          "percentile99": 6301.5
+        },
+        "totalCount": 90
+      },
+      {
+        "id": "d2e6fc69-3379-4300-910d-e75374877913",
+        "name": "Select_Dropdown",
+        "path": [
+          "Tableau_Protocol_3",
+          "Actions",
+          "Select_Dropdown"
+        ],
+        "type": "TRANSACTION",
+        "display_name": "Tableau_Protocol_3 \\ Actions \\ Select_Dropdown",
+        "aggregate": {
+          "count": 87,
+          "elementPerSecond": 0.13748072,
+          "minDuration": 814,
+          "maxDuration": 1503,
+          "sumDuration": 83834,
+          "avgDuration": 963.6092,
+          "minTTFB": 5,
+          "maxTTFB": 16,
+          "sumTTFB": 727,
+          "avgTTFB": 8.356322,
+          "sumDownloadedBytes": 2581932,
+          "downloadedBytesPerSecond": 4080.0676,
+          "successCount": 87,
+          "successPerSecond": 0.13748072,
+          "successRate": 100.0,
+          "failureCount": 0,
+          "failurePerSecond": 0.0,
+          "failureRate": 0.0,
+          "percentile50": 890.0,
+          "percentile90": 1363.5,
+          "percentile95": 1415.5,
+          "percentile99": 1502.0
+        },
+        "totalCount": 87
+      }
+    ]
+  },
+  "ext_data": [
+    {
+      "id": "cf83425b-7491-3d09-9fa3-04ba3e79bcdf",
+      "name": "Timer",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Click Dropdown",
+        "Timer"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Click Dropdown \\ Timer",
+      "percentiles": {
+        "percentile50": 1358.0,
+        "percentile90": 1784.4,
+        "percentile95": 1882.1999999999998,
+        "percentile99": 2106.8399999999997
+      }
+    },
+    {
+      "id": "93d0d298-a4f2-3b81-99ff-061f97eb85d7",
+      "name": "DOM Content Loaded",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "DOM Content Loaded"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ DOM Content Loaded",
+      "percentiles": {
+        "percentile50": 1483.0,
+        "percentile90": 2144.0,
+        "percentile95": 2247.3999999999996,
+        "percentile99": 2472.68
+      }
+    },
+    {
+      "id": "69d75417-b15c-3f71-9edd-0fc4b663a914",
+      "name": "Document Complete",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Document Complete"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Document Complete",
+      "percentiles": {
+        "percentile50": 1665.0,
+        "percentile90": 2417.8,
+        "percentile95": 2512.3999999999996,
+        "percentile99": 2763.28
+      }
+    },
+    {
+      "id": "03ea432b-755f-39d1-a501-85f0dc68fc62",
+      "name": "DOM Content Loaded",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Launch",
+        "DOM Content Loaded"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Launch \\ DOM Content Loaded",
+      "percentiles": {
+        "percentile50": 2456.0,
+        "percentile90": 3250.0,
+        "percentile95": 3374.7999999999997,
+        "percentile99": 3486.16
+      }
+    },
+    {
+      "id": "32e36f29-3b92-3080-81f2-60dc9ec0bf34",
+      "name": "Document Complete",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Launch",
+        "Document Complete"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Launch \\ Document Complete",
+      "percentiles": {
+        "percentile50": 2466.0,
+        "percentile90": 3265.0,
+        "percentile95": 3391.2,
+        "percentile99": 3507.04
+      }
+    },
+    {
+      "id": "f61fa770-da59-3bd5-b45c-f56c27ff3600",
+      "name": "On Load",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Launch",
+        "On Load"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Launch \\ On Load",
+      "percentiles": {
+        "percentile50": 2466.0,
+        "percentile90": 3265.0,
+        "percentile95": 3391.0,
+        "percentile99": 3506.2000000000003
+      }
+    },
+    {
+      "id": "096c401c-30cf-32c4-97cd-d3e41fc0c366",
+      "name": "Time To First Byte",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Launch",
+        "Time To First Byte"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Launch \\ Time To First Byte",
+      "percentiles": {
+        "percentile50": 123.0,
+        "percentile90": 176.0,
+        "percentile95": 202.2,
+        "percentile99": 218.84
+      }
+    },
+    {
+      "id": "09a57c15-2ca7-3f41-ab55-749ad5be800d",
+      "name": "Timer",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Launch",
+        "Timer"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Launch \\ Timer",
+      "percentiles": {
+        "percentile50": 3866.0,
+        "percentile90": 4871.6,
+        "percentile95": 5265.799999999999,
+        "percentile99": 5559.56
+      }
+    },
+    {
+      "id": "d2d58e5d-5792-3f11-856d-002dbacfea90",
+      "name": "Timer",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Login",
+        "Timer"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Login \\ Timer",
+      "percentiles": {
+        "percentile50": 289.0,
+        "percentile90": 310.8,
+        "percentile95": 314.2,
+        "percentile99": 321.24
+      }
+    },
+    {
+      "id": "9ed45a97-4a7a-36ab-89eb-1e0cce69db2f",
+      "name": "On Load",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "On Load"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ On Load",
+      "percentiles": {
+        "percentile50": 1665.0,
+        "percentile90": 2417.8,
+        "percentile95": 2512.3999999999996,
+        "percentile99": 2763.28
+      }
+    },
+    {
+      "id": "01716f8c-7a87-32f9-9a55-a5793181da92",
+      "name": "Timer",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Tableau Login",
+        "Timer"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Tableau Login \\ Timer",
+      "percentiles": {
+        "percentile50": 4826.0,
+        "percentile90": 5954.2,
+        "percentile95": 6021.8,
+        "percentile99": 6049.96
+      }
+    },
+    {
+      "id": "c8fa42eb-3ac8-3862-b917-4d14407ce05e",
+      "name": "Time To First Byte",
+      "path": [
+        "Ext. Data",
+        "SeleniumDelegate",
+        "Timers",
+        "SeleniumUserPath",
+        "Time To First Byte"
+      ],
+      "display_name": "Ext. Data \\ SeleniumDelegate \\ Timers \\ SeleniumUserPath \\ Time To First Byte",
+      "percentiles": {
+        "percentile50": 240.0,
+        "percentile90": 452.4,
+        "percentile95": 462.79999999999995,
+        "percentile99": 465.36
+      }
+    }
+  ]
+}

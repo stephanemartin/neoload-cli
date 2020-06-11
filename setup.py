@@ -42,7 +42,8 @@ setup(
         'junit_xml',
         'termcolor',
         'coloredlogs',
-        'docker'
+        'docker',
+        'jinja2'
     ],
     long_description_content_type='text/markdown',
     long_description=long_description
