@@ -29,6 +29,7 @@ __operation_monitors = "/monitors"
 __resolver = Resolver(__endpoint)
 
 meta_key = 'result id'
+gprint = print
 
 
 @click.command()
@@ -42,7 +43,6 @@ def cli(template, json_in, json_out, name):
     json_data_text = None
 
     use_stdout = True
-    gprint = print
 
     if not json_in is None:
         json_data_text = get_file_text(json_in) if json_in is not None else None
@@ -87,26 +87,12 @@ def cli(template, json_in, json_out, name):
         json_elements_transactions = list(sorted(json_elements_transactions, key=lambda x: x['display_name']))
 
         gprint("Getting monitors...")
-        json_elements_monitors = rest_crud.get(get_end_point(__id, __operation_monitors))
+        json_monitors = rest_crud.get(get_end_point(__id, __operation_monitors))
 
-        ext_datas = []
-        for ext in list(filter(lambda m: m['path'][0] == 'Ext. Data', json_elements_monitors)):
-            ext_datas.append(ext)
-        for ext in ext_datas:
-            full_name = ext['name'] if not 'path' in ext else " \ ".join(ext['path'])
-            gprint("Getting external data values for '" + full_name + "'")
-            json_extdata_points = rest_crud.get(get_end_point(__id, __operation_monitors) + "/" + ext['id'] + "/points")
-            sorted_ext = list(sorted(map(lambda x: x['AVG'], json_extdata_points)))
-            ext["display_name"] = full_name
-            #txn["points"] = json_extdata_points
-            ext["percentiles"] = {
-                'percentile50': percentile(sorted_ext,0.5),
-                'percentile90': percentile(sorted_ext,0.9),
-                'percentile95': percentile(sorted_ext,0.95),
-                'percentile99': percentile(sorted_ext,0.99)
-            }
-
+        ext_datas = get_mon_datas(__id, lambda m: m['path'][0] == 'Ext. Data', json_monitors, False)
         ext_datas = list(sorted(ext_datas, key=lambda x: x['display_name']))
+
+        ctrl_datas = get_mon_datas(__id, lambda m: m['path'][0] == 'Controller', json_monitors, True)
 
         json_result["startDateText"] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(json_result['startDate']/1000))
         json_result["endDateText"] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(json_result['endDate']/1000))
@@ -123,7 +109,8 @@ def cli(template, json_in, json_out, name):
             'elements': {
                 'transactions': json_elements_transactions
             },
-            'ext_data': ext_datas
+            'ext_data': ext_datas,
+            'controller_points': ctrl_datas,
         }
 
         json_data_text = json.dumps(data, indent=2)
@@ -201,3 +188,24 @@ def get_human_readable_time(reldel):
     human_readable = lambda delta: ['%d %s' % (getattr(delta, attr), getattr(delta, attr) > 1 and attr or attr[:-1])
         for attr in attrs if getattr(delta, attr)]
     return human_readable(reldel)
+
+def get_mon_datas(result_id, l_selector, base_col, include_points):
+    mons = []
+    for mon in list(filter(l_selector, base_col)):
+        mons.append(mon)
+    for mon in mons:
+        full_name = mon['name'] if not 'path' in mon else " \ ".join(mon['path'])
+        gprint("Getting monitor values for '" + full_name + "'")
+        mon_points = rest_crud.get(get_end_point(result_id, __operation_monitors) + "/" + mon['id'] + "/points")
+        time_points = list(sorted(mon_points, key=lambda x: x['from']))
+        perc_points = list(sorted(map(lambda x: x['AVG'], mon_points)))
+        mon["display_name"] = full_name
+        #txn["points"] = json_extdata_points
+        mon["percentiles"] = {
+            'percentile50': percentile(perc_points,0.5),
+            'percentile90': percentile(perc_points,0.9),
+            'percentile95': percentile(perc_points,0.95),
+            'percentile99': percentile(perc_points,0.99)
+        }
+        mon["points"] = time_points if include_points else []
+    return mons
